@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+}
+
+.container {
+  max-width: 98rem;
+  padding: 1.5rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  grid-gap: 1.5rem;
+}
+
+.card {
+  font-family: sans-serif;
+  background-color: #262525;
+  color: #fff;
+  padding: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+}
+
+.card-tittle-large {
+  font-family: fantasy;
+  font-size: 10rem;
+  letter-spacing: 0.5rem;
+  transform: translateX(7rem);
+  color: #1d1d1d;
+  transition: transform 3s;
+}
+
+.card-tittle-small {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.card-description {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.card-cta {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  margin-top: 1rem;
+  align-self: flex-end;
+}
+
+.card:hover {
+  transition: 1s;
+  cursor: default;
+}
+
+.card:hover .card-tittle-large {
+  color: #fff;
+}
+
+.card.twitter:hover .card-tittle-large {
+  transform: translateX(-120%);
+}
+
+.card.instagram:hover .card-tittle-large {
+  transform: translateX(-210%);
+}
+
+.card.facebook:hover .card-tittle-large {
+  transform: translateX(-200%);
+}
+
+.card.youtube:hover .card-tittle-large {
+  transform: translateX(-150%);
+}
+
+.card.linkedin:hover .card-tittle-large {
+  transform: translateX(-160%);
+}
+
+.card.twitter:hover {
+  background-color: #1da1f2;
+  box-shadow: 0px 0px 50px #1da1f2;
+}
+
+.card.instagram:hover {
+  --cor-instagram: radial-gradient(
+    at 20% 128%,
+    #feda78 20%,
+    #e23467 60%,
+    #ac2bb3 90%
+  );
+
+  background-image: var(--cor-instagram);
+  box-shadow: 0px 0px 50px #ac2aa1;
+}
+
+.card.facebook:hover {
+  background-color: #4267b2;
+  box-shadow: 0px 0px 50px #4267b2;
+}
+
+.card.youtube:hover {
+  background-color: #ff074f;
+  box-shadow: 0px 0px 50px #ff074f;
+}
+
+.card.linkedin:hover {
+  background-color: #0a66c2;
+  box-shadow: 0px 0px 50px #0a66c2;
+}
